@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/nuzzesick/NodeJS-intro/issues"
   },
-  "homepage": "https://github.com/nuzzesick/NodeJS-intro#readme"
+  "homepage": "https://github.com/nuzzesick/NodeJS-intro#readme",
+  "dependencies": {
+    "yargs": "^16.2.0"
+  }
 }

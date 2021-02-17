@@ -4,6 +4,7 @@ Current list of flags:
 */
 
 const fs = require('fs');
+const argv = require('yargs').argv;
 const { table } = require('console')
 const readline = require('readline');
 const rl = readline.createInterface({
@@ -19,9 +20,8 @@ rl.question('What is the multiplication table you want to learn? ', (base) => {
   } else {
     const file = `multiplication-table-of-${base}.txt`;
     let table = ``;
-    let limit = process.argv[2];
-    limit = limit ? limit.split('=') : 10;
-    limit = parseInt(limit[1]) || 10;
+    let limit = argv.limit;
+    limit = typeof(limit) === 'number' ? limit : 10;
 
     for (let i = 0; i <= limit; i++ ) {
       table += `${base} x ${i} = ${base*i}\n`;
