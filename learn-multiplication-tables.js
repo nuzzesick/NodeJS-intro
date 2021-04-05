@@ -5,7 +5,6 @@ Current list of flags:
 
 const fs = require('fs');
 const argv = require('yargs').argv;
-const { table } = require('console')
 const readline = require('readline');
 const rl = readline.createInterface({
     input: process.stdin,
